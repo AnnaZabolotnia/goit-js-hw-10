@@ -1,10 +1,10 @@
-/**
+/*
   |============================
   | include css partials with
   | default @import url()
   |============================
 */
-/* @import url('./reset.css');
+@import url('./reset.css');
 @import url('./vite-promo.css');
 @import url('./header.css');
 
@@ -22,9 +22,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-} */
+}
 
 /* Timer */
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -75,6 +78,8 @@ button[data-start] {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 360px;
+  position: relative;
 }
 
 label {
@@ -82,9 +87,17 @@ label {
   margin-bottom: 10px;
 }
 
+input[type='number'] {
+  display: block;
+  margin-top: 8px;
+  padding: 8px;
+}
+
+.label-input-number,
 input[type='number'],
-input[type='radio'] {
-  margin-left: 5px;
+fieldset,
+.button {
+  width: 100%;
 }
 
 fieldset {
@@ -92,10 +105,13 @@ fieldset {
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 legend {
   font-weight: bold;
+  padding: 0 5px;
 }
 
 button {
